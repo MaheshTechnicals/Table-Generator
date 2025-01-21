@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Generator</title>
+  <link rel="stylesheet" href="styles.css" type="text/css" media="all" />
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>Table Generator</h1>
+
+    <div id="step1" class="card">
+      <input type="number" id="columns" min="1" placeholder="Enter number of columns">
+      <button id="nextBtn">Next</button>
+    </div>
+
+    <div id="step2" class="card hidden">
+      <div class="table-container">
+        <table id="dynamicTable">
+          <thead>
+            <tr id="tableHeader"></tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+      <button id="addRowBtn">Add Row</button>
+      <button id="generateBtn">Generate Table</button>
+    </div>
+
+    <div id="step3" class="card hidden">
+      <div class="table-container" id="generatedTableContainer"></div>
+      <textarea id="tableHTML" readonly></textarea>
+      <button id="copyBtn">Copy to Clipboard</button>
+      <button id="newTableBtn">Create New Table</button>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Copied to clipboard!</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
